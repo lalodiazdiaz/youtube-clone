@@ -3,20 +3,6 @@ import { Link } from "react-router-dom";
 import { logo } from "../utils/constants";
 import SearchBar from "./SearchBar";
 
-const styles = {
-  text: {
-    display: "flex",
-    color: "white",
-    fontSize: "25px",
-    margin: 0,
-    fontWeight: "bold",
-    fontFamily: "cursive",
-    "@media (min-width: 600px)": {
-      color: "blue",
-    },
-  },
-};
-
 const Navbar = () => (
   <Stack
     direction="row"
