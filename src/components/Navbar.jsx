@@ -1,7 +1,21 @@
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { logo } from "../utils/constants";
 import SearchBar from "./SearchBar";
+
+const styles = {
+  text: {
+    display: "flex",
+    color: "white",
+    fontSize: "25px",
+    margin: 0,
+    fontWeight: "bold",
+    fontFamily: "cursive",
+    "@media (min-width: 600px)": {
+      color: "blue",
+    },
+  },
+};
 
 const Navbar = () => (
   <Stack
@@ -15,22 +29,18 @@ const Navbar = () => (
       justifyContent: "space-between",
     }}
   >
-    <Link
-      to="/"
-      style={{ display: "flex", alignItems: "center", marginLeft: "10px" }}
-    >
+    <Link to="/" style={{ display: "flex", alignItems: "center" }}>
       <img src={logo} alt="logo" height={45} />
-      <p
-        style={{
-          color: "white",
-          fontSize: "35px",
-          margin: 0,
-          fontWeight: "bold",
-          fontFamily: "cursive",
-        }}
+      <Typography
+        sx={{ display: { xs: "none", md: "flex" } }}
+        color={"white"}
+        variant="h4"
+        m={0}
+        fontWeight={"bold"}
+        fontFamily={"fantasy"}
       >
         You<span style={{ color: "red" }}>Clone</span>
-      </p>
+      </Typography>
     </Link>
 
     <SearchBar />
