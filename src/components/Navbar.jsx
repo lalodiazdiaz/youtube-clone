@@ -20,7 +20,19 @@ const Navbar = () => (
       style={{ display: "flex", alignItems: "center", marginLeft: "10px" }}
     >
       <img src={logo} alt="logo" height={45} />
+      <p
+        style={{
+          color: "white",
+          fontSize: "35px",
+          margin: 0,
+          fontWeight: "bold",
+          fontFamily: "cursive",
+        }}
+      >
+        You<span style={{ color: "red" }}>Clone</span>
+      </p>
     </Link>
+
     <SearchBar />
   </Stack>
 );
